@@ -1,4 +1,5 @@
 import '/components/dark_light_switch_large_widget.dart';
+import '/flutter_flow/flutter_flow_ad_banner.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -535,8 +536,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
-        body: SafeArea(
-          top: true,
+        body: Padding(
+          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 20.0),
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [
@@ -815,6 +816,23 @@ class _HomePageWidgetState extends State<HomePageWidget>
                     ],
                   ),
                 ].divide(const SizedBox(height: 25.0)),
+              ),
+              Expanded(
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    Align(
+                      alignment: const AlignmentDirectional(0.0, 1.0),
+                      child: FlutterFlowAdBanner(
+                        width: MediaQuery.sizeOf(context).width * 1.0,
+                        height: 50.0,
+                        showsTestAd: true,
+                        iOSAdUnitID:
+                            'bannerca-app-pub-9796029185821457/8057092297',
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
