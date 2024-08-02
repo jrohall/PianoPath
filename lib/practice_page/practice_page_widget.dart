@@ -297,7 +297,15 @@ class _PracticePageWidgetState extends State<PracticePageWidget> {
                     ),
                     FFButtonWidget(
                       onPressed: () async {
-                        context.pushNamed('HomePage');
+                        context.pushNamed(
+                          'HomePage',
+                          extra: <String, dynamic>{
+                            kTransitionInfoKey: const TransitionInfo(
+                              hasTransition: true,
+                              transitionType: PageTransitionType.rightToLeft,
+                            ),
+                          },
+                        );
                       },
                       text: 'Finish',
                       options: FFButtonOptions(
